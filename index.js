@@ -2,43 +2,145 @@
 
 json = [
   {
-    "name": "Muralla China",
-    "description": "Una maravilla del mundo, actualmente es la murallas mas grande de todo el mundo, se encuentra en china etc.",
-    "imagenes": [
-      {
-        "image": "/assets/card-example/img/muralla1.jpeg"
-      },
-      {
-        "image": "/assets/card-example/img/muralla2.jpeg"
-      },
-      {
-        "image": "/assets/card-example/img/muralla3.jpeg"
-      }
-    ],
-    "link_sitio": "https://www.britannica.com/topic/Great-Wall-of-China",
-    "link_ubicacion": "https://maps.app.goo.gl/QuNohwKMHDL2t5VP9",
-    "filtro": "/assets/filtros/image.png"
+      "name": "Muralla China",
+      "description": "Una maravilla del mundo, actualmente es la murallas mas grande de todo el mundo, se encuentra en china etc.",
+      "imagenes": [
+          {
+              "image": "/assets/card-example/img/muralla1.jpeg"
+          },
+          {
+              "image": "/assets/card-example/img/muralla2.jpeg"
+          },
+          {
+              "image": "/assets/card-example/img/muralla3.jpeg"
+          }
+      ],
+      "link_sitio": "https://www.britannica.com/topic/Great-Wall-of-China",
+      "link_ubicacion": "https://maps.app.goo.gl/QuNohwKMHDL2t5VP9",
+      "filtro": "/assets/filtros/image.png"
   },
   {
-    "name": "Machu Picchu",
-    "description": "Descubre la ciudadela inca escondida en los Andes peruanos.",
-    "imagenes": [
-      {
-        "image": "/assets/card-example/img/chichenItza.jpeg"
-      },
-      {
-        "image": "/assets/card-example/img/chichen2.jpeg"
-      },
-      {
-        "image": "/assets/card-example/img/chichen3.jpg"
-      },
-      {
-        "image": "/assets/card-example/img/chichen4.jpeg"
-      }
-    ],
-    "link_sitio": "https://es.wikipedia.org/wiki/Machu_Picchu",
-    "link_ubicacion": "https://maps.app.goo.gl/HPvYxWgCPDuv6P9d9",
-    "filtro": "/assets/filtros/image2.png"
+      "name": "Chichen Itza",
+      "description": "Descubre la ciudadela inca escondida en los Andes peruanos.",
+      "imagenes": [
+          {
+              "image": "/assets/card-example/img/chichenItza.jpeg"
+          },
+          {
+              "image": "/assets/card-example/img/chichen2.jpeg"
+          },
+          {
+              "image": "/assets/card-example/img/chichen3.jpg"
+          },
+          {
+              "image": "/assets/card-example/img/chichen4.jpeg"
+          }
+      ],
+      "link_sitio": "https://es.wikipedia.org/wiki/Chich%C3%A9n_Itz%C3%A1",
+      "link_ubicacion": "https://maps.app.goo.gl/HPvYxWgCPDuv6P9d9",
+      "filtro": "/assets/filtros/image2.png"
+  },
+  {
+      "name": "Coliseo de Roma",
+      "description": "Antiguo anfiteatro romano y símbolo de Roma, el Coliseo atrae millones de turistas cada año por su historia arquitectura y legado del Imperio romano.",
+      "imagenes": [
+          {
+              "image": "/assets/card-example/img/coliseo1.jpg"
+          },
+          {
+              "image": "/assets/card-example/img/coliseo2.jpg"
+          },
+          {
+              "image": "/assets/card-example/img/coliseo3.jpg"
+          }
+      ],
+      "link_sitio": "https://es.wikipedia.org/wiki/Coliseo",
+      "link_ubicacion": "https://g.co/kgs/pYmJkc1",
+      "filtro": "/assets/filtros/image2.png"
+  },
+  {
+      "name": "Cristo Redentor",
+      "description": "Ícono de Río de Janeiro y una de las maravillas modernas, el Cristo Redentor se alza sobre el Corcovado como símbolo de paz y atracción turística mundial.",
+      "imagenes": [
+          {
+              "image": "/assets/card-example/img/cristo.jpg"
+          },
+          {
+              "image": "/assets/card-example/img/cristo2.jpg"
+          },
+          {
+              "image": "/assets/card-example/img/cristo3.jpg"
+          },
+          {
+              "image": "/assets/card-example/img/cristo4.jpg"
+          }
+      ],
+      "link_sitio": "https://es.wikipedia.org/wiki/Cristo_Redentor",
+      "link_ubicacion": "https://g.co/kgs/HtM9tQQ",
+      "filtro": "/assets/filtros/image2.png"
+  },
+  {
+      "name": "Machu Picchu",
+      "description": "Antigua ciudad inca enclavada en los Andes, Machu Picchu es un destino místico y asombroso, rodeado de paisajes que quitan el aliento.",
+      "imagenes": [
+          {
+              "image": "/assets/card-example/img/machu.jpg"
+          },
+          {
+              "image": "/assets/card-example/img/machu2.jpg"
+          },
+          {
+              "image": "/assets/card-example/img/machu3.jpg"
+          },
+          {
+              "image": "/assets/card-example/img/machu4.jpg"
+          }
+      ],
+      "link_sitio": "https://es.wikipedia.org/wiki/Machu_Picchu",
+      "link_ubicacion": "https://g.co/kgs/EwGJYyJ",
+      "filtro": "/assets/filtros/image2.png"
+  },
+  {
+      "name": "Petra",
+      "description": "Ciudad tallada en piedra rosa, Petra fue capital nabatea y hoy es un tesoro arqueológico que sorprende con su belleza y misterio.",
+      "imagenes": [
+          {
+              "image": "/assets/card-example/img/petra1.jpg"
+          },
+          {
+              "image": "/assets/card-example/img/petra2.jpg"
+          },
+          {
+              "image": "/assets/card-example/img/petra3.jpg"
+          },
+          {
+              "image": "/assets/card-example/img/petra4.jpg"
+          }
+      ],
+      "link_sitio": "https://es.wikipedia.org/wiki/Petra",
+      "link_ubicacion": "https://g.co/kgs/Le4i86o",
+      "filtro": "/assets/filtros/image2.png"
+  },
+  {
+      "name": "Taj Mahal",
+      "description": "Majestuoso mausoleo de mármol blanco, el Taj Mahal es un símbolo del amor eterno y una obra maestra de la arquitectura mogol.",
+      "imagenes": [
+          {
+              "image": "/assets/card-example/img/taj.jpg"
+          },
+          {
+              "image": "/assets/card-example/img/taj2.jpg"
+          },
+          {
+              "image": "/assets/card-example/img/taj3.jpg"
+          },
+          {
+              "image": "/assets/card-example/img/taj4.jpg"
+          }
+      ],
+      "link_sitio": "https://es.wikipedia.org/wiki/Taj_Mahal",
+      "link_ubicacion": "https://g.co/kgs/m96UZxN",
+      "filtro": "/assets/filtros/image2.png"
   }
 ]
 
@@ -102,7 +204,7 @@ const mountInfo = (entityPadre, object) => {
   webButton.setAttribute('width', '0.15');
   webButton.setAttribute('animation', 'property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate');
 
-  
+
   const locationButton = document.createElement("a-image");
   locationButton.setAttribute('visible', false);
   locationButton.setAttribute('id', `location-button-${name}`);
@@ -118,13 +220,13 @@ const mountInfo = (entityPadre, object) => {
   filterButton.setAttribute('visible', false);
   filterButton.setAttribute('id', `filter-button-${name}`);
   filterButton.setAttribute('class', 'clickable');
-  filterButton.setAttribute('src', '#icon-filter'); 
+  filterButton.setAttribute('src', '#icon-filter');
   filterButton.setAttribute('alpha-test', "0.5");
   filterButton.setAttribute('position', '0.75 -0.5 0');
   filterButton.setAttribute('height', '0.15');
   filterButton.setAttribute('width', '0.15');
   filterButton.setAttribute('animation', 'property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate');
-  
+
   const title = document.createElement("a-text")
   title.setAttribute("value", object.name)
   title.setAttribute("color", 'black')
@@ -302,7 +404,7 @@ const showPortfolio = (done, index) => {
 }
 
 const showInfo = (index) => {
-  console.log("showinfo",index)
+  console.log("showinfo", index)
   object = json[index]
   const name = object.name.replace(/\s+/g, '-').toLowerCase();
 
@@ -336,8 +438,8 @@ const showInfo = (index) => {
     window.open(object.link_ubicacion, "_blank");
     currentTab = 'location';
   });
-  filterButtom.addEventListener('click', function(evt){
-    const filterData = { filter: object.filtro}
+  filterButtom.addEventListener('click', function (evt) {
+    const filterData = { filter: object.filtro }
     localStorage.setItem('filter', JSON.stringify(filterData))
     window.open("filtro.html")
   })
