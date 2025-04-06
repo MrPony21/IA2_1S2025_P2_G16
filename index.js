@@ -1,46 +1,63 @@
+
+
+json = [
+  {
+    "name": "Muralla China",
+    "description": "",
+    "image": "https://i.imgur.com/0gWZk2y.jpg",
+    "image2": "",
+    "image3": "",
+    "link_sitio": "https://www.britannica.com/topic/Great-Wall-of-China",
+    "link_ubicacion": "https://maps.app.goo.gl/QuNohwKMHDL2t5VP9"
+  },
+  {
+    "name": "Machu Picchu",
+    "description": "Descubre la ciudadela inca escondida en los Andes peruanos.",
+    "image": "https://i.imgur.com/Z1YdR0X.jpg",
+    "image2": "https://i.imgur.com/B2XkLmb.jpg",
+    "image3": "https://i.imgur.com/2z5Yk3B.jpg",
+    "link_sitio": "https://es.wikipedia.org/wiki/Machu_Picchu",
+    "link_ubicacion": "https://maps.app.goo.gl/HPvYxWgCPDuv6P9d9"
+  }
+]
+
+
+
+
 const showInfo = () => {
   let y = 0;
-  const profileButton = document.querySelector("#profile-button");
   const webButton = document.querySelector("#web-button");
   const emailButton = document.querySelector("#email-button");
   const locationButton = document.querySelector("#location-button");
   const text = document.querySelector("#text");
+  const information = document.querySelector("#information");
 
-  profileButton.setAttribute("visible", true);
-  setTimeout(() => {
-    webButton.setAttribute("visible", true);
-  }, 300);
+
+  webButton.setAttribute("visible", true);
   setTimeout(() => {
     emailButton.setAttribute("visible", true);
-  }, 600);
+  }, 200);
   setTimeout(() => {
     locationButton.setAttribute("visible", true);
-  }, 900);
+  }, 400);
 
   let currentTab = '';
+  text.setAttribute("value", "Muralla China");
+
   webButton.addEventListener('click', function (evt) {
-    text.setAttribute("value", "https://softmind.tech");
-    currentTab = 'web';
+    information.setAttribute("value", "AR, VR solutions and consu\nltations for your business");
+    information.setAttribute("visible", !information.getAttribute("visible"))
+
+    console.log("es esto",info)
   });
   emailButton.addEventListener('click', function (evt) {
-    text.setAttribute("value", "hello@softmind.tech");
-    currentTab = 'email';
-  });
-  profileButton.addEventListener('click', function (evt) {
-    text.setAttribute("value", "AR, VR solutions and consultation");
-    currentTab = 'profile';
+    window.open("https://www.britannica.com/topic/Great-Wall-of-China", "_blank");
   });
   locationButton.addEventListener('click', function (evt) {
-    console.log("loc");
-    text.setAttribute("value", "Vancouver, Canada | Hong Kong");
+    window.open("https://maps.app.goo.gl/QuNohwKMHDL2t5VP9", "_blank");
     currentTab = 'location';
   });
 
-  text.addEventListener('click', function (evt) {
-    if (currentTab === 'web') {
-      window.location.href = "https://softmind.tech";
-    }
-  });
 }
 
 const showPortfolio = (done) => {
@@ -48,7 +65,7 @@ const showPortfolio = (done) => {
   const portfolioLeftButton = document.querySelector("#portfolio-left-button");
   const portfolioRightButton = document.querySelector("#portfolio-right-button");
   const paintandquestPreviewButton = document.querySelector("#paintandquest-preview-button");
-
+  
   let y = 0;
   let currentItem = 0;
 
@@ -91,7 +108,7 @@ const showPortfolio = (done) => {
         done();
       }, 500);
     }
-    portfolio.setAttribute("position", "0 " + y + " -0.01");
+    portfolio.setAttribute("position","0 0 " + y);
   }, 10);
 }
 
@@ -111,19 +128,38 @@ const showAvatar = (onDone) => {
 AFRAME.registerComponent('mytarget', {
   init: function () {
     this.el.addEventListener('targetFound', event => {
-      console.log("target found");
-      showAvatar(() => {
-        setTimeout(() => {
-          showPortfolio(() => {
-            setTimeout(() => {
-              showInfo();
-            }, 300);
-          });
-        }, 300);
-      });
+      const targetIndex = this.el.getAttribute('mindar-image-target').targetIndex;
+      console.log(`Target found: ${targetIndex}`);
+
+      if (targetIndex === 0) {
+        // Lógica para el primer objetivo (Muralla China)
+        console.log("hola mundo");
+        showAvatar(() => {
+          setTimeout(() => {
+            showPortfolio(() => {
+              setTimeout(() => {
+                showInfo();
+              }, 100);
+            });
+          }, 300);
+        });
+      } else if (targetIndex === 1) {
+        console.log("Target found: Machu Picchu");
+        showAvatar(() => {
+          setTimeout(() => {
+            showPortfolio(() => {
+              setTimeout(() => {
+                showInfo();
+              }, 100);
+            });
+          }, 300);
+        });
+      }
     });
+
     this.el.addEventListener('targetLost', event => {
-      console.log("target lost");
+      const targetIndex = this.el.getAttribute('mindar-image-target').targetIndex;
+      console.log(`Target lost: ${targetIndex}`);
     });
   }
-});
+})

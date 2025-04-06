@@ -1,0 +1,18 @@
+[
+    {
+      "id": "scene1",
+      "imageTargetSrc": "./assets/card-example/mind/target1.mind",
+      "image": "./assets/card-example/card.png",
+      "model": "https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/examples/image-tracking/assets/card-example/softmind/scene.gltf",
+      "scale": "0.004 0.004 0.004",
+      "position": "0 -0.25 0"
+    },
+    {
+      "id": "scene2",
+      "imageTargetSrc": "./assets/card-example/mind/chichen.mind",
+      "image": "./assets/card-example/profile.png",
+      "model": "./assets/card-example/chichen.gltf",
+      "scale": "0.1 0.1 0.1",
+      "position": "0 -0.25 0"
+    }
+  ]
