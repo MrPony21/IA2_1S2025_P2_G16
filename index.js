@@ -3,7 +3,7 @@
 json = [
   {
     "name": "Muralla China",
-    "description": "",
+    "description": "Una maravilla del mundo, actualmente es la murallas mas grande de todo el mundo, se encuentra en china etc.",
     "imagenes": [
       {
         "image": "/assets/card-example/img/muralla1.jpeg"
@@ -16,7 +16,8 @@ json = [
       }
     ],
     "link_sitio": "https://www.britannica.com/topic/Great-Wall-of-China",
-    "link_ubicacion": "https://maps.app.goo.gl/QuNohwKMHDL2t5VP9"
+    "link_ubicacion": "https://maps.app.goo.gl/QuNohwKMHDL2t5VP9",
+    "filtro": "/assets/filtros/image.png"
   },
   {
     "name": "Machu Picchu",
@@ -36,7 +37,8 @@ json = [
       }
     ],
     "link_sitio": "https://es.wikipedia.org/wiki/Machu_Picchu",
-    "link_ubicacion": "https://maps.app.goo.gl/HPvYxWgCPDuv6P9d9"
+    "link_ubicacion": "https://maps.app.goo.gl/HPvYxWgCPDuv6P9d9",
+    "filtro": "/assets/filtros/image2.png"
   }
 ]
 
@@ -84,7 +86,7 @@ const mountInfo = (entityPadre, object) => {
   infoButtom.setAttribute('class', 'clickable')
   infoButtom.setAttribute('src', '#icon-info')
   infoButtom.setAttribute('alpha-test', "0.5")
-  infoButtom.setAttribute('position', '-0.50 -0.5 0')
+  infoButtom.setAttribute('position', '-0.75 -0.5 0')
   infoButtom.setAttribute('height', '0.15')
   infoButtom.setAttribute('width', '0.15')
   infoButtom.setAttribute('animation', 'property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate')
@@ -95,22 +97,34 @@ const mountInfo = (entityPadre, object) => {
   webButton.setAttribute('class', 'clickable');
   webButton.setAttribute('src', '#icon-search');
   webButton.setAttribute('alpha-test', "0.5");
-  webButton.setAttribute('position', '0 -0.5 0');
+  webButton.setAttribute('position', '-0.25 -0.5 0');
   webButton.setAttribute('height', '0.15');
   webButton.setAttribute('width', '0.15');
   webButton.setAttribute('animation', 'property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate');
 
+  
   const locationButton = document.createElement("a-image");
   locationButton.setAttribute('visible', false);
   locationButton.setAttribute('id', `location-button-${name}`);
   locationButton.setAttribute('class', 'clickable');
   locationButton.setAttribute('src', '#icon-location');
   locationButton.setAttribute('alpha-test', "0.5");
-  locationButton.setAttribute('position', '0.5 -0.5 0');
+  locationButton.setAttribute('position', '0.25 -0.5 0');
   locationButton.setAttribute('height', '0.15');
   locationButton.setAttribute('width', '0.15');
   locationButton.setAttribute('animation', 'property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate');
 
+  const filterButton = document.createElement("a-image");
+  filterButton.setAttribute('visible', false);
+  filterButton.setAttribute('id', `filter-button-${name}`);
+  filterButton.setAttribute('class', 'clickable');
+  filterButton.setAttribute('src', '#icon-filter'); 
+  filterButton.setAttribute('alpha-test', "0.5");
+  filterButton.setAttribute('position', '0.75 -0.5 0');
+  filterButton.setAttribute('height', '0.15');
+  filterButton.setAttribute('width', '0.15');
+  filterButton.setAttribute('animation', 'property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate');
+  
   const title = document.createElement("a-text")
   title.setAttribute("value", object.name)
   title.setAttribute("color", 'black')
@@ -124,28 +138,42 @@ const mountInfo = (entityPadre, object) => {
   title.setAttribute("wrapCount", "150");
 
 
+  const formattedDescription = formatedDescription(object.description, 5);
+
   const information = document.createElement("a-text");
   information.setAttribute('id', `information-${name}`)
-  information.setAttribute("value", object.description);
+  information.setAttribute("value", formattedDescription);
   information.setAttribute("visible", "false");
   information.setAttribute("class", "clickable");
   information.setAttribute("color", "black");
   information.setAttribute("align", "center");
-  information.setAttribute("width", "1.5");
+  information.setAttribute("width", "0.9");
   information.setAttribute("position", "1.3 0 0");
   information.setAttribute("geometry", "primitive:plane; height: 1; width: 0.6;");
   information.setAttribute("material", "opacity: 0.5");
   information.setAttribute("wrapCount", "150");
 
+
   entityPadre.appendChild(infoButtom)
   entityPadre.appendChild(webButton)
   entityPadre.appendChild(locationButton)
+  entityPadre.appendChild(filterButton)
   entityPadre.appendChild(title)
   entityPadre.appendChild(information)
 
 
 }
 
+function formatedDescription(text, maxWordsPerLine = 4) {
+  const words = text.split(' ');
+  let lines = [];
+
+  for (let i = 0; i < words.length; i += maxWordsPerLine) {
+    lines.push(words.slice(i, i + maxWordsPerLine).join(' '));
+  }
+
+  return lines.join('\n');
+}
 
 const setComponent2 = (componente, name, index) => {
 
@@ -282,6 +310,7 @@ const showInfo = (index) => {
   const infoButtom = document.getElementById(`info-buttom-${name}`);
   const webButtom = document.getElementById(`web-button-${name}`);
   const locationButtom = document.getElementById(`location-button-${name}`);
+  const filterButtom = document.getElementById(`filter-button-${name}`)
   const information = document.getElementById(`information-${name}`);
 
 
@@ -292,6 +321,10 @@ const showInfo = (index) => {
   setTimeout(() => {
     locationButtom.setAttribute("visible", true);
   }, 400);
+  setTimeout(() => {
+    filterButtom.setAttribute("visible", true)
+  }, 600)
+
 
   infoButtom.addEventListener('click', function (evt) {
     information.setAttribute("visible", !information.getAttribute("visible"))
@@ -303,6 +336,11 @@ const showInfo = (index) => {
     window.open(object.link_ubicacion, "_blank");
     currentTab = 'location';
   });
+  filterButtom.addEventListener('click', function(evt){
+    const filterData = { filter: object.filtro}
+    localStorage.setItem('filter', JSON.stringify(filterData))
+    window.open("filtro.html")
+  })
 
 }
 
