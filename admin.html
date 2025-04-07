@@ -1,42 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Agregar Destino Turístico</title>
-  <link rel="stylesheet" href="admin.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo de Administrador</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .btn-agregar {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .btn-agregar:hover {
+            background-color: #45a049;
+        }
+        
+        .btn-cerrar {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        .btn-cerrar:hover {
+            background-color: #d32f2f;
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        .content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Nuevo Destino Turístico</h1>
-    <form id="formDestino">
-      <input type="text" id="name" placeholder="Nombre" required>
-      <textarea id="description" placeholder="Descripción" required></textarea>
-      
-      <label>Imágenes (puedes seleccionar varias)</label>
-      <input type="file" id="imagenes" accept="image/*" multiple required>
-
-      <input type="url" id="link_sitio" placeholder="Link al sitio" required>
-      <input type="url" id="link_ubicacion" placeholder="Link a ubicación" required>
-
-      <label>Filtro (imagen)</label>
-      <input type="file" id="filtro" accept="image/*" required>
-
-      <button type="submit">Agregar</button>
-      <button id="btnRegresar">⬅ Regresar al Inicio</button>
-
-    </form>
-
-    <h2>Resultado JSON:</h2>
-    <pre id="outputJson"></pre>
-  </div>
-  <script src="index.js"></script>
-  <script src="admin.js"></script>
- 
-  <script>
-    document.getElementById('btnRegresar').addEventListener('click', function () {
-      window.location.href = 'inicio.html';
-    });
-  </script>
-  
+    <div class="content">
+        <div class="header">
+            <p class="title">Módulo de administrador</p>
+            <div class="btn-container">
+                <a href="./nuevo_destino.html" class="btn btn-agregar">Agregar nuevo destino</a>
+                <a href="./login.html" class="btn btn-cerrar">Cerrar sesión</a>
+            </div>
+        </div>
+        
+        <!-- Aquí puedes agregar más contenido del módulo de administrador -->
+        <p>Bienvenido al panel de administración. Desde aquí puedes gestionar los destinos disponibles.</p>
+    </div>
 </body>
 </html>
