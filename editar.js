@@ -1,0 +1,143 @@
+let json = [
+    {
+        "name": "Muralla China",
+        "description": "Una maravilla del mundo, actualmente es la murallas mas grande de todo el mundo, se encuentra en china etc.",
+        "imagenes": [
+            {
+                "image": "/assets/card-example/img/muralla1.jpeg"
+            },
+            {
+                "image": "/assets/card-example/img/muralla2.jpeg"
+            },
+            {
+                "image": "/assets/card-example/img/muralla3.jpeg"
+            }
+        ],
+        "link_sitio": "https://www.britannica.com/topic/Great-Wall-of-China",
+        "link_ubicacion": "https://maps.app.goo.gl/QuNohwKMHDL2t5VP9",
+        "filtro": "/assets/filtros/muralla.png"
+    },
+    {
+        "name": "Chichen Itza",
+        "description": "Descubre la ciudadela inca escondida en los Andes peruanos.",
+        "imagenes": [
+            {
+                "image": "/assets/card-example/img/chichenItza.jpeg"
+            },
+            {
+                "image": "/assets/card-example/img/chichen2.jpeg"
+            },
+            {
+                "image": "/assets/card-example/img/chichen3.jpg"
+            },
+            {
+                "image": "/assets/card-example/img/chichen4.jpeg"
+            }
+        ],
+        "link_sitio": "https://es.wikipedia.org/wiki/Chich%C3%A9n_Itz%C3%A1",
+        "link_ubicacion": "https://maps.app.goo.gl/HPvYxWgCPDuv6P9d9",
+        "filtro": "/assets/filtros/chichen4.png"
+    },
+    {
+        "name": "Coliseo de Roma",
+        "description": "Antiguo anfiteatro romano y símbolo de Roma, el Coliseo atrae millones de turistas cada año por su historia arquitectura y legado del Imperio romano.",
+        "imagenes": [
+            {
+                "image": "/assets/card-example/img/coliseo1.jpg"
+            },
+            {
+                "image": "/assets/card-example/img/coliseo2.jpg"
+            },
+            {
+                "image": "./assets/card-example/img/coliseo4.jpg"
+            }
+        ],
+        "link_sitio": "https://es.wikipedia.org/wiki/Coliseo",
+        "link_ubicacion": "https://g.co/kgs/pYmJkc1",
+        "filtro": "/assets/filtros/roma.png"
+    },
+    {
+        "name": "Cristo Redentor",
+        "description": "Ícono de Río de Janeiro y una de las maravillas modernas, el Cristo Redentor se alza sobre el Corcovado como símbolo de paz y atracción turística mundial.",
+        "imagenes": [
+            {
+                "image": "/assets/card-example/img/cristo.jpg"
+            },
+            {
+                "image": "/assets/card-example/img/cristo2.jpg"
+            },
+            {
+                "image": "/assets/card-example/img/cristo3.jpg"
+            },
+            {
+                "image": "/assets/card-example/img/cristo4.jpg"
+            }
+        ],
+        "link_sitio": "https://es.wikipedia.org/wiki/Cristo_Redentor",
+        "link_ubicacion": "https://g.co/kgs/HtM9tQQ",
+        "filtro": "/assets/filtros/cristo_redentor.png"
+    },
+    {
+        "name": "Machu Picchu",
+        "description": "Antigua ciudad inca enclavada en los Andes, Machu Picchu es un destino místico y asombroso, rodeado de paisajes que quitan el aliento.",
+        "imagenes": [
+            {
+                "image": "/assets/card-example/img/machu.jpg"
+            },
+            {
+                "image": "/assets/card-example/img/machu2.jpg"
+            },
+            {
+                "image": "/assets/card-example/img/machu3.jpg"
+            },
+            {
+                "image": "/assets/card-example/img/machu4.jpg"
+            }
+        ],
+        "link_sitio": "https://es.wikipedia.org/wiki/Machu_Picchu",
+        "link_ubicacion": "https://g.co/kgs/EwGJYyJ",
+        "filtro": "/assets/filtros/machuPichu.png"
+    },
+    {
+        "name": "Petra",
+        "description": "Ciudad tallada en piedra rosa, Petra fue capital nabatea y hoy es un tesoro arqueológico que sorprende con su belleza y misterio.",
+        "imagenes": [
+            {
+                "image": "/assets/card-example/img/petra1.jpg"
+            },
+            {
+                "image": "/assets/card-example/img/petra2.JPG"
+            },
+            {
+                "image": "/assets/card-example/img/petra3.jpg"
+            },
+            {
+                "image": "/assets/card-example/img/petra4.jpg"
+            }
+        ],
+        "link_sitio": "https://es.wikipedia.org/wiki/Petra",
+        "link_ubicacion": "https://g.co/kgs/Le4i86o",
+        "filtro": "/assets/filtros/petra.png"
+    },
+    {
+        "name": "Taj Mahal",
+        "description": "Majestuoso mausoleo de mármol blanco, el Taj Mahal es un símbolo del amor eterno y una obra maestra de la arquitectura mogol.",
+        "imagenes": [
+            {
+                "image": "/assets/card-example/img/taj.jpg"
+            },
+            {
+                "image": "/assets/card-example/img/taj2.jpeg"
+            },
+            {
+                "image": "/assets/card-example/img/taj3.jpg"
+            },
+            {
+                "image": "/assets/card-example/img/taj4.jpg"
+            }
+        ],
+        "link_sitio": "https://es.wikipedia.org/wiki/Taj_Mahal",
+        "link_ubicacion": "https://g.co/kgs/m96UZxN",
+        "filtro": "/assets/filtros/india.png"
+    }
+  ];
