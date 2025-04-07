@@ -15,7 +15,7 @@ let json = [
       ],
       "link_sitio": "https://www.britannica.com/topic/Great-Wall-of-China",
       "link_ubicacion": "https://maps.app.goo.gl/QuNohwKMHDL2t5VP9",
-      "filtro": "/assets/filtros/image.png"
+      "filtro": "/assets/filtros/muralla.png"
   },
   {
       "name": "Chichen Itza",
@@ -36,7 +36,7 @@ let json = [
       ],
       "link_sitio": "https://es.wikipedia.org/wiki/Chich%C3%A9n_Itz%C3%A1",
       "link_ubicacion": "https://maps.app.goo.gl/HPvYxWgCPDuv6P9d9",
-      "filtro": "/assets/filtros/image2.png"
+      "filtro": "/assets/filtros/chichen4.png"
   },
   {
       "name": "Coliseo de Roma",
@@ -49,12 +49,12 @@ let json = [
               "image": "/assets/card-example/img/coliseo2.jpg"
           },
           {
-              "image": "/assets/card-example/img/coliseo3.jpg"
+              "image": "./assets/card-example/img/coliseo4.jpg"
           }
       ],
       "link_sitio": "https://es.wikipedia.org/wiki/Coliseo",
       "link_ubicacion": "https://g.co/kgs/pYmJkc1",
-      "filtro": "/assets/filtros/image2.png"
+      "filtro": "/assets/filtros/roma.png"
   },
   {
       "name": "Cristo Redentor",
@@ -75,7 +75,7 @@ let json = [
       ],
       "link_sitio": "https://es.wikipedia.org/wiki/Cristo_Redentor",
       "link_ubicacion": "https://g.co/kgs/HtM9tQQ",
-      "filtro": "/assets/filtros/image2.png"
+      "filtro": "/assets/filtros/cristo_redentor.png"
   },
   {
       "name": "Machu Picchu",
@@ -96,7 +96,7 @@ let json = [
       ],
       "link_sitio": "https://es.wikipedia.org/wiki/Machu_Picchu",
       "link_ubicacion": "https://g.co/kgs/EwGJYyJ",
-      "filtro": "/assets/filtros/image2.png"
+      "filtro": "/assets/filtros/machuPichu.png"
   },
   {
       "name": "Petra",
@@ -106,7 +106,7 @@ let json = [
               "image": "/assets/card-example/img/petra1.jpg"
           },
           {
-              "image": "/assets/card-example/img/petra2.jpg"
+              "image": "/assets/card-example/img/petra2.JPG"
           },
           {
               "image": "/assets/card-example/img/petra3.jpg"
@@ -117,7 +117,7 @@ let json = [
       ],
       "link_sitio": "https://es.wikipedia.org/wiki/Petra",
       "link_ubicacion": "https://g.co/kgs/Le4i86o",
-      "filtro": "/assets/filtros/image2.png"
+      "filtro": "/assets/filtros/petra.png"
   },
   {
       "name": "Taj Mahal",
@@ -127,7 +127,7 @@ let json = [
               "image": "/assets/card-example/img/taj.jpg"
           },
           {
-              "image": "/assets/card-example/img/taj2.jpg"
+              "image": "/assets/card-example/img/taj2.jpeg"
           },
           {
               "image": "/assets/card-example/img/taj3.jpg"
@@ -138,20 +138,20 @@ let json = [
       ],
       "link_sitio": "https://es.wikipedia.org/wiki/Taj_Mahal",
       "link_ubicacion": "https://g.co/kgs/m96UZxN",
-      "filtro": "/assets/filtros/image2.png"
+      "filtro": "/assets/filtros/india.png"
   }
 ]
 
 // Verificar si ya existe el JSON en localStorage
 
-if (!localStorage.getItem('wondersData')) {
-  // Si no existe, guardarlo
-  localStorage.setItem('wondersData', JSON.stringify(json));
-  json = initialData;
-} else {
-  // Si existe, recuperarlo
-  json = JSON.parse(localStorage.getItem('wondersData'));
-}
+// if (!localStorage.getItem('wondersData')) {
+//   // Si no existe, guardarlo
+//   localStorage.setItem('wondersData', JSON.stringify(json));
+//   json = initialData;
+// } else {
+//   // Si existe, recuperarlo
+//   json = JSON.parse(localStorage.getItem('wondersData'));
+// }
 
 //UTILIZAREMOS ESTE COMO CODIGO IDENTIFICADOR DE CADA ENTIDAD-PORTAFOLIO-ETC
 //name = json[i].name.replace(/\s+/g, '-').toLowerCase();
@@ -474,15 +474,11 @@ AFRAME.registerComponent('mytarget', {
       const targetIndex = this.el.getAttribute('mindar-image-target').targetIndex;
       console.log(`Target found: ${targetIndex}`);
 
-      showAvatar(() => {
-        setTimeout(() => {
-          showPortfolio(() => {
-            setTimeout(() => {
-              showInfo(targetIndex);
-            }, 100);
-          }, targetIndex);
-        }, 300);
-      });
+      showPortfolio(() => {
+      setTimeout(() => {
+        showInfo(targetIndex);
+      }, 100);
+      }, targetIndex);
     });
 
     this.el.addEventListener('targetLost', event => {
