@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Eliminar Destinos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #detalles {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+    .imagenes img {
+      max-width: 100px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Eliminar Destinos</h1>
+
+  <label for="selectDestino">Selecciona un destino:</label>
+  <select id="selectDestino">
+    <option value="">-- Elige un destino --</option>
+    
+  </select>
+  <a href="admin.html">Regresar</a>
+
+  <div id="detalles" style="display: none;"></div>
+
+  <script>
+    const selectDestino = document.getElementById('selectDestino');
+    const detallesDiv = document.getElementById('detalles');
+
+    let lugares = JSON.parse(sessionStorage.getItem('lugares')) || [];
+
+    // Poblar el select con los destinos
+    lugares.forEach((destino, index) => {
+      const option = document.createElement('option');
+      option.value = index;
+      option.textContent = destino.name;
+      selectDestino.appendChild(option);
+    });
+
+    // Mostrar detalles al seleccionar
+    selectDestino.addEventListener('change', function () {
+      const index = this.value;
+      if (index === "") {
+        detallesDiv.style.display = 'none';
+        detallesDiv.innerHTML = "";
+        return;
+      }
+
+      const destino = lugares[index];
+      detallesDiv.style.display = 'block';
+      detallesDiv.innerHTML = `
+        <h3>${destino.name}</h3>
+        <p><strong>Descripción:</strong> ${destino.description}</p>
+        <div class="imagenes">
+          ${destino.imagenes.map(img => `<img src="${img.image}" alt="Imagen">`).join('')}
+        </div>
+        <p><strong>Sitio:</strong> <a href="${destino.link_sitio}" target="_blank">${destino.link_sitio}</a></p>
+        <p><strong>Ubicación:</strong> <a href="${destino.link_ubicacion}" target="_blank">${destino.link_ubicacion}</a></p>
+        <p><strong>Filtro:</strong> ${destino.filtro}</p>
+        <button id="eliminarBtn">Eliminar</button>
+      `;
+
+      // Evento para "eliminar" (sobrescribir con destino vacío, manteniendo cantidad de imágenes)
+      document.getElementById('eliminarBtn').addEventListener('click', function () {
+        if (confirm(`¿Estás seguro de marcar "${destino.name}" como no disponible?`)) {
+          const nombreOriginal = destino.name;
+
+          lugares = lugares.map(item => {
+            if (item.name === nombreOriginal) {
+              return {
+                name: "Destino no disponible",
+                description: "",
+                imagenes: item.imagenes.map(() => ({ image: "" })), // Igualar longitud
+                link_sitio: "",
+                link_ubicacion: "",
+                filtro: ""
+              };
+            }
+            return item;
+          });
+
+          sessionStorage.setItem('lugares', JSON.stringify(lugares));
+          alert('Destino marcado como no disponible.');
+          location.reload();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
