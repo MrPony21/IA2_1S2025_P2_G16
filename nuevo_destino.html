@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Agregar Destino Turístico</title>
-  <link rel="stylesheet" href="admin.css">
+    <meta charset="UTF-8">
+    <title>Agregar Destino Turístico</title>
+    <link rel="stylesheet" href="admin.css">
 </head>
+
 <body>
-  <div class="container">
-    <h1>Nuevo Destino Turístico</h1>
-    <form id="formDestino">
-      <input type="text" id="name" placeholder="Nombre" required>
-      <textarea id="description" placeholder="Descripción" required></textarea>
-      
-      <label>Imágenes (puedes seleccionar varias)</label>
-      <input type="file" id="imagenes" accept="image/*" multiple required>
+    <div class="container">
+        <h1>Nuevo Destino Turístico</h1>
+        <form id="formDestino">
+            <input type="text" id="name" placeholder="Nombre" required>
+            <textarea id="description" placeholder="Descripción" required></textarea>
 
-      <input type="url" id="link_sitio" placeholder="Link al sitio" required>
-      <input type="url" id="link_ubicacion" placeholder="Link a ubicación" required>
+            <label>Rutas de Imágenes (separadas por comas)</label>
+            <input type="text" id="imagenes" placeholder="Ej: /assets/img1.jpg, /assets/img2.jpg" required>
 
-      <label>Filtro (imagen)</label>
-      <input type="file" id="filtro" accept="image/*" required>
+            <input type="url" id="link_sitio" placeholder="Link al sitio" required>
+            <input type="url" id="link_ubicacion" placeholder="Link a ubicación" required>
 
-      <button type="submit">Agregar</button>
-      <button id="btnRegresar">⬅ Regresar al Inicio</button>
+            <label>Ruta del Filtro</label>
+            <input type="text" id="filtro" placeholder="Ej: /assets/filtro.jpg" required>
 
-    </form>
+            <button type="submit">Agregar</button>
+            <button id="btnRegresar">⬅ Regresar al Inicio</button>
+        </form>
 
-    <h2>Resultado JSON:</h2>
-    <pre id="outputJson"></pre>
-  </div>
-  <script src="index.js"></script>
-  <script src="admin.js"></script>
- 
-  <script>
-    document.getElementById('btnRegresar').addEventListener('click', function () {
-      window.location.href = 'admin.html';
-    });
-  </script>
-  
+        <h2>Resultado JSON:</h2>
+        <pre id="outputJson"></pre>
+    </div>
+    <script src="index.js"></script>
+    <script src="admin.js"></script>
+
 </body>
+
 </html>
