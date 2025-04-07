@@ -154,7 +154,7 @@
       ],
       "link_sitio": "https://es.wikipedia.org/wiki/Departamento_de_Pet%C3%A9n",
       "link_ubicacion": "https://maps.app.goo.gl/o6xEpxYeNb5RwSC99",
-      "filtro": "/assets/filtros/image2.png"
+      "filtro": "/assets/filtros/tikal.png"
     },
     {
       "name": "Castillo de san Felipe",
@@ -170,7 +170,7 @@
       ],
       "link_sitio": "https://es.wikipedia.org/wiki/Castillo_de_San_Felipe_de_Lara",
       "link_ubicacion": "https://maps.app.goo.gl/wDjNz8UqNSuLLNZx6",
-      "filtro": "/assets/filtros/image2.png"
+      "filtro": "/assets/filtros/FELIPE.png"
     },
     {
       "name": "Iglesia de Esquipulas",
@@ -186,7 +186,7 @@
       ],
       "link_sitio": "https://es.wikipedia.org/wiki/Catedral_bas%C3%ADlica_de_Esquipulas",
       "link_ubicacion": "https://maps.app.goo.gl/Xey8k756kcRrL8rc6",
-      "filtro": "/assets/filtros/image2.png"
+      "filtro": "/assets/filtros/esquipuulas.png"
     },
     {
       "name": "Antigua Guatemala",
@@ -202,7 +202,7 @@
       ],
       "link_sitio": "https://es.wikipedia.org/wiki/Antigua_Guatemala",
       "link_ubicacion": "https://maps.app.goo.gl/7K3eWQJwPkMBV4Tn6",
-      "filtro": "/assets/filtros/image2.png"
+      "filtro": "/assets/filtros/antigua.png"
     },
     {
       "name": "Semuc Champey",
@@ -218,7 +218,7 @@
       ],
       "link_sitio": "https://es.wikipedia.org/wiki/Semuc_Champey",
       "link_ubicacion": "https://maps.app.goo.gl/SkMrjFFuGxZ3W5UV7",
-      "filtro": "/assets/filtros/image2.png"
+      "filtro": "/assets/filtros/semuc.png"
     },
     {
         "name": "Panajachel",
@@ -234,7 +234,7 @@
         ],
         "link_sitio": "https://es.wikipedia.org/wiki/Panajachel",
         "link_ubicacion": "https://maps.app.goo.gl/dhrWetmLyqXZ72AX7",
-        "filtro": "/assets/filtros/image2.png"
+        "filtro": "/assets/filtros/pana.png"
       },
     {
       "name": "Playa Blanca",
@@ -250,6 +250,6 @@
       ],
       "link_sitio": "https://es.wikipedia.org/wiki/Playa_Blanca_(Guatemala)",
       "link_ubicacion": "https://maps.app.goo.gl/axBUUxFLwacuRCnq8",
-      "filtro": "/assets/filtros/image2.png"
+      "filtro": "/assets/filtros/playablanca.png"
     }
   ]
