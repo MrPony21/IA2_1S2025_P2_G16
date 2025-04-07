@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agregar Destino Turístico</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Nuevo Destino Turístico</h1>
+    <form id="formDestino">
+      <input type="text" id="name" placeholder="Nombre" required>
+      <textarea id="description" placeholder="Descripción" required></textarea>
+      
+      <label>Imágenes (puedes seleccionar varias)</label>
+      <input type="file" id="imagenes" accept="image/*" multiple required>
+
+      <input type="url" id="link_sitio" placeholder="Link al sitio" required>
+      <input type="url" id="link_ubicacion" placeholder="Link a ubicación" required>
+
+      <label>Filtro (imagen)</label>
+      <input type="file" id="filtro" accept="image/*" required>
+
+      <button type="submit">Agregar</button>
+      <button id="btnRegresar">⬅ Regresar al Inicio</button>
+
+    </form>
+
+    <h2>Resultado JSON:</h2>
+    <pre id="outputJson"></pre>
+  </div>
+  <script src="index.js"></script>
+  <script src="admin.js"></script>
+ 
+  <script>
+    document.getElementById('btnRegresar').addEventListener('click', function () {
+      window.location.href = 'inicio.html';
+    });
+  </script>
+  
+</body>
+</html>

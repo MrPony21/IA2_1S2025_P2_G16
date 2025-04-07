@@ -1,6 +1,4 @@
-
-
-json = [
+let json = [
   {
       "name": "Muralla China",
       "description": "Una maravilla del mundo, actualmente es la murallas mas grande de todo el mundo, se encuentra en china etc.",
@@ -143,6 +141,17 @@ json = [
       "filtro": "/assets/filtros/image2.png"
   }
 ]
+
+// Verificar si ya existe el JSON en localStorage
+
+if (!localStorage.getItem('wondersData')) {
+  // Si no existe, guardarlo
+  localStorage.setItem('wondersData', JSON.stringify(json));
+  json = initialData;
+} else {
+  // Si existe, recuperarlo
+  json = JSON.parse(localStorage.getItem('wondersData'));
+}
 
 //UTILIZAREMOS ESTE COMO CODIGO IDENTIFICADOR DE CADA ENTIDAD-PORTAFOLIO-ETC
 //name = json[i].name.replace(/\s+/g, '-').toLowerCase();
