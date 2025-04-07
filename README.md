@@ -250,3 +250,24 @@ if (!AFRAME.components['mindar-image']) {
   console.error('MindAR no está cargado!');
 }
 Nota: El archivo adjunto al HTML (./index.js) probablemente implementa estas u otras funcionalidades similares para controlar la experiencia AR mostrada en el documento principal.
+
+```
+# Análisis del Módulo de Administrador (`admin.html`)
+
+## Estructura General
+- **Tipo de documento**: Página HTML5 en español (`lang="es"`)
+- **Propósito**: Panel de control para administradores con funcionalidades CRUD básicas
+
+## Componentes Principales
+
+### 1. Cabecera
+```html
+<div class="header">
+    <p class="title">Módulo de administrador</p>
+    <div class="btn-container">
+        <a href="./nuevo_destino.html" class="btn btn-agregar">Agregar nuevo destino</a>
+        <a href="./editar.html" class="btn btn-agregar">Editar</a>
+        <a href="./eliminar.html" class="btn btn-agregar">Eliminar</a>
+        <a href="./login.html" class="btn btn-cerrar">Cerrar sesión</a>
+    </div>
+</div>
